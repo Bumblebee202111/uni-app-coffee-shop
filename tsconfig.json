@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
@@ -31,7 +31,8 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.jsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "vite.config.ts"
     ],
   "vueCompilerOptions": {
     "plugins": ["@uni-helper/uni-types/volar-plugin"]
