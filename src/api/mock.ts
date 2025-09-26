@@ -38,3 +38,12 @@ export function fetchProducts(): Promise<Product[]> {
     }, 500)
   })
 }
+
+export function fetchProductById(id: number): Promise<Product | undefined> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const product = mockProducts.find((p) => p.id === id)
+      resolve(product)
+    }, 300)
+  })
+}

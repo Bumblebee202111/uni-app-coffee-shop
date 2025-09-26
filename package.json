@@ -85,6 +85,7 @@
     "sass": "1.64.2",
     "typescript": "^5.9.2",
     "vite": "5.4.20",
+    "vite-plugin-uni-pages": "^0.2.23",
     "vue-tsc": "^3.0.7"
   }
 }

@@ -5,11 +5,18 @@
     </view>
 
     <view v-else class="product-grid">
-      <view v-for="product in products" :key="product.id" class="product-card">
-        <image :src="product.imageUrl" class="product-image" mode="aspectFill" />
-        <text class="product-name">{{ product.name }}</text>
-        <text class="product-price">¥{{ product.price.toFixed(2) }}</text>
-      </view>
+      <navigator
+        v-for="product in products"
+        :key="product.id"
+        :url="`/pages/detail/index?id=${product.id}`"
+        class="product-card-link"
+      >
+        <view class="product-card">
+          <image :src="product.imageUrl" class="product-image" mode="aspectFill" />
+          <text class="product-name">{{ product.name }}</text>
+          <text class="product-price">¥{{ product.price.toFixed(2) }}</text>
+        </view>
+      </navigator>
     </view>
   </view>
 </template>
@@ -37,7 +44,7 @@ onLoad(async () => {
 
 <style scoped>
 .page-container {
-  padding: calc(var(--status-bar-height) + 15px) 15px 15px;
+  padding: 15px;
   background-color: #f7f7f7;
   min-height: 100vh;
 }
@@ -54,6 +61,10 @@ onLoad(async () => {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+}
+
+.product-card-link {
+  text-decoration: none;
 }
 
 .product-card {
