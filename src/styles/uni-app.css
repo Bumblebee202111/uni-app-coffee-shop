@@ -1,0 +1,6 @@
+/* For IDE autocompletion and error checking ONLY. */
+:root {
+    --status-bar-height: 20px;
+    --window-top: 0px;
+    --window-bottom: 0px;
+}
