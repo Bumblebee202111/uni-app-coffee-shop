@@ -76,6 +76,7 @@
     "@uni-helper/eslint-config": "^0.5.0",
     "@uni-helper/plugin-uni": "0.1.0",
     "@uni-helper/uni-types": "^1.0.0-alpha.6",
+    "@uni-helper/vite-plugin-uni-pages": "^0.3.15",
     "@vue/runtime-core": "3.4.21",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.36.0",
@@ -85,7 +86,6 @@
     "sass": "1.64.2",
     "typescript": "^5.9.2",
     "vite": "5.4.20",
-    "vite-plugin-uni-pages": "^0.2.23",
     "vue-tsc": "^3.0.7"
   }
 }

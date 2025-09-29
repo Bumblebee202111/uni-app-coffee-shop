@@ -1,8 +1,8 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import Uni from '@uni-helper/plugin-uni'
-import UniPages from 'vite-plugin-uni-pages'
 import { defineConfig } from 'vite'
+import UniPages from '@uni-helper/vite-plugin-uni-pages'
+import Uni from '@uni-helper/plugin-uni'
 
 export default defineConfig({
   resolve: {
@@ -11,8 +11,9 @@ export default defineConfig({
     },
   },
   plugins: [
+    // https://uni-helper.js.org/vite-plugin-uni-pages
+    UniPages(),
     // https://uni-helper.js.org/plugin-uni
     Uni(),
-    UniPages(),
   ],
 })

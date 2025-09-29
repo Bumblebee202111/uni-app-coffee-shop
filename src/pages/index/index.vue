@@ -27,6 +27,12 @@ import type { Product } from '@/types/product'
 import { fetchProducts } from '@/api/mock'
 import { onLoad } from '@dcloudio/uni-app'
 
+definePage({
+  style: {
+    navigationStyle: 'custom',
+  },
+})
+
 const products = ref<Product[]>()
 const isLoading = ref<boolean>(true)
 
@@ -44,7 +50,7 @@ onLoad(async () => {
 
 <style scoped>
 .page-container {
-  padding: 15px;
+  padding: calc(var(--status-bar-height) + 15px) 15px 15px;
   background-color: #f7f7f7;
   min-height: 100vh;
 }

@@ -3,14 +3,27 @@ import { ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import type { Product } from '@/types/product'
 import { fetchProductById } from '@/api/mock'
+import { useCartStore } from '@/stores/cartStore'
+
+definePage({
+  style: {
+    navigationBarTitleText: 'Product Details',
+  },
+})
 
 const product = ref<Product | null>(null)
 const isLoading = ref(true)
+const cartStore = useCartStore()
+
+function handleAddToCart() {
+  if (product.value) {
+    cartStore.addItem(product.value)
+  }
+}
 
 onLoad(async (options) => {
   if (options?.id) {
     const productId = parseInt(options.id, 10)
-
     try {
       const fetchedProduct = await fetchProductById(productId)
       if (fetchedProduct) {
@@ -37,7 +50,7 @@ onLoad(async (options) => {
       <text class="detail-name">{{ product.name }}</text>
       <text class="detail-price">￥{{ product.price.toFixed(2) }}</text>
       <text class="detail-description">{{ product.description }}</text>
-      <button class="add-to-cart-btn">Add to Cart</button>
+      <button class="add-to-cart-btn" @click="handleAddToCart">Add to Cart</button>
     </view>
     <view v-else class="error-container">
       <text>Product not found.</text>
