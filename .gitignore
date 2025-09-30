@@ -20,4 +20,4 @@ dist
 *.sln
 *.sw?
 
-pages.json
+/src/pages.json
