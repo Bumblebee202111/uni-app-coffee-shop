@@ -26,6 +26,12 @@ export default defineUniPages({
         iconPath: 'static/tabs/cart-inactive.png',
         selectedIconPath: 'static/tabs/cart-active.png',
       },
+      {
+        pagePath: 'pages/profile/index',
+        text: 'Profile',
+        iconPath: 'static/tabs/profile-inactive.png',
+        selectedIconPath: 'static/tabs/profile-active.png',
+      },
     ],
   },
   subPackages: [],

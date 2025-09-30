@@ -47,3 +47,29 @@ export function fetchProductById(id: number): Promise<Product | undefined> {
     }, 300)
   })
 }
+
+interface LoginPayload {
+  code: string
+  profile: {
+    nickName: string
+    avatarUrl: string
+  }
+}
+
+interface LoginResponse {
+  token: string
+  message: string
+}
+
+// noinspection JSUnusedLocalSymbols
+export function mockServerLogin(payload: LoginPayload): Promise<LoginResponse> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const fakeToken = `session_token_${Date.now()}`
+      resolve({
+        token: fakeToken,
+        message: 'Login successful on server.',
+      })
+    }, 1000)
+  })
+}

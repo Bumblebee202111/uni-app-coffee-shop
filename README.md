@@ -4,17 +4,17 @@ A simple e-commerce mini-app for a coffee shop, built with uni-app. This project
 
 ## Features
 
--   Browse a list of coffee products.
--   View detailed information for each product.
--   Add and remove items from a shopping cart.
--   Simulated user profile page.
+- Browse a list of coffee products.
+- View detailed information for each product.
+- Add and remove items from a shopping cart.
+- User profile page with real WeChat login API integration.
 
 ## Technologies Used
 
--   **Framework:** [uni-app](https://uniapp.dcloud.io/) (with Vue 3 Composition API)
--   **Language:** [TypeScript](https://www.typescriptlang.org/)
--   **State Management:** [Pinia](https://pinia.vuejs.org/)
--   **Build Tool:** [Vite](https://vitejs.dev/)
+- **Framework:** [uni-app](https://uniapp.dcloud.io/) (with Vue 3 Composition API)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **State Management:** [Pinia](https://pinia.vuejs.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
 
 ## How to Run
 
